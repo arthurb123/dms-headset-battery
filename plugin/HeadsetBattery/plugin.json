@@ -1,0 +1,19 @@
+{
+    "id": "headsetBattery",
+    "name": "Headset Battery",
+    "description": "Shows the battery level and connection state of a wireless headset (e.g. Logitech PRO X 2 LIGHTSPEED) via HeadsetControl, with low-battery notifications",
+    "version": "0.1.0",
+    "author": "arthurb123",
+    "type": "composite",
+    "capabilities": ["daemon", "dankbar-widget"],
+    "icon": "headphones",
+    "components": {
+        "daemon": "./HeadsetDaemon.qml",
+        "widget": "./HeadsetWidget.qml"
+    },
+    "settings": "./Settings.qml",
+    "startupCheck": "./StartupCheck.qml",
+    "requires_dms": ">=1.5.0",
+    "dependencies": ["headsetcontrol"],
+    "permissions": ["settings_read", "settings_write"]
+}

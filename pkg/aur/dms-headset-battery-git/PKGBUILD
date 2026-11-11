@@ -1,0 +1,31 @@
+# Maintainer: arthurb123 <https://github.com/arthurb123>
+pkgname=dms-headset-battery-git
+_pkgname=dms-headset-battery
+pkgver=0.1.0
+pkgrel=1
+pkgdesc="DankMaterialShell bar widget showing wireless headset battery via HeadsetControl (git)"
+arch=('any')
+url="https://github.com/arthurb123/dms-headset-battery"
+license=('MIT')
+depends=('dms-shell' 'headsetcontrol' 'libnotify')
+makedepends=('git')
+provides=("$_pkgname")
+conflicts=("$_pkgname")
+source=("$_pkgname::git+$url.git")
+sha256sums=('SKIP')
+
+pkgver() {
+    cd "$_pkgname"
+    if git describe --long --tags --abbrev=7 >/dev/null 2>&1; then
+        git describe --long --tags --abbrev=7 | sed 's/^v//;s/\([^-]*-g\)/r\1/;s/-/./g'
+    else
+        printf "0.1.0.r%s.g%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short=7 HEAD)"
+    fi
+}
+
+package() {
+    cd "$_pkgname"
+    install -Dm644 plugin/HeadsetBattery/* -t "$pkgdir/etc/xdg/quickshell/dms-plugins/HeadsetBattery/"
+    install -Dm644 LICENSE "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+    install -Dm644 README.md "$pkgdir/usr/share/doc/$pkgname/README.md"
+}

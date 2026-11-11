@@ -1,0 +1,4 @@
+pkg/aur/*/src/
+pkg/aur/*/pkg/
+pkg/aur/*/*.tar.*
+pkg/aur/*/dms-headset-battery/

@@ -1,0 +1,17 @@
+pkgbase = dms-headset-battery-git
+	pkgdesc = DankMaterialShell bar widget showing wireless headset battery via HeadsetControl (git)
+	pkgver = 0.1.0
+	pkgrel = 1
+	url = https://github.com/arthurb123/dms-headset-battery
+	arch = any
+	license = MIT
+	makedepends = git
+	depends = dms-shell
+	depends = headsetcontrol
+	depends = libnotify
+	provides = dms-headset-battery
+	conflicts = dms-headset-battery
+	source = dms-headset-battery::git+https://github.com/arthurb123/dms-headset-battery.git
+	sha256sums = SKIP
+
+pkgname = dms-headset-battery-git

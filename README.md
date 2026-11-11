@@ -22,11 +22,12 @@ Low-battery desktop notifications are sent once when the level drops to the **wa
 
 ```sh
 git clone https://github.com/arthurb123/dms-headset-battery
-cd dms-headset-battery/pkg/aur/dms-headset-battery-git   # builds the latest commit
+cd dms-headset-battery/pkg/aur/dms-headset-battery       # latest release
+# or: cd dms-headset-battery/pkg/aur/dms-headset-battery-git   # latest commit on main
 makepkg -si
 ```
 
-This installs the plugin system-wide into `/etc/xdg/quickshell/dms-plugins/HeadsetBattery` and pulls in `headsetcontrol` and `libnotify`. After a tagged release, `pkg/aur/dms-headset-battery` builds that release instead.
+This installs the plugin system-wide into `/etc/xdg/quickshell/dms-plugins/HeadsetBattery` and pulls in `headsetcontrol` and `libnotify`. The two packages conflict, so install one or the other. If DMS doesn't list the plugin right after a first install, press **Scan** in Settings → Plugins (or run `dms ipc plugin-scan scan`).
 
 ### Any distro (per user)
 

@@ -9,6 +9,6 @@ pkgbase = dms-headset-battery
 	depends = headsetcontrol
 	depends = libnotify
 	source = dms-headset-battery-0.1.0.tar.gz::https://github.com/arthurb123/dms-headset-battery/archive/refs/tags/v0.1.0.tar.gz
-	sha256sums = SKIP
+	sha256sums = 56a7c3910a39ea95fe5706364062a86e103705508251e3fd0ed17b9fb86d0bc8
 
 pkgname = dms-headset-battery

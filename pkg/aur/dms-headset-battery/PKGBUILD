@@ -8,7 +8,7 @@ url="https://github.com/arthurb123/dms-headset-battery"
 license=('MIT')
 depends=('dms-shell' 'headsetcontrol' 'libnotify')
 source=("$pkgname-$pkgver.tar.gz::$url/archive/refs/tags/v$pkgver.tar.gz")
-sha256sums=('SKIP')
+sha256sums=('56a7c3910a39ea95fe5706364062a86e103705508251e3fd0ed17b9fb86d0bc8')
 
 package() {
     cd "$pkgname-$pkgver"
